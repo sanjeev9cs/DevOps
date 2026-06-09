@@ -215,4 +215,147 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30080  
+      nodePort: 30080
+
+
+
+
+
+
+
+
+solution: 
+
+EC2 instance launch------------
+multi
+i-071c32e58fba4efb5
+Running
+
+t3.medium
+Initializing
+ap-south-1a
+ec2-52-66-157-176.ap-south-1.compute.amazonaws.com
+52.66.157.176
+–
+–
+disabled
+launch-wizard-8
+sanjeev
+2026/06/09 09:39 GMT+5:30
+Linux/UNIX
+false
+
+
+
+
+
+Security group rule ID---------------------------------
+	
+
+–
+sgr-0c4b07646a87174c2
+IPv4
+HTTP
+TCP
+80
+0.0.0.0/0
+–
+–
+sgr-014b1c6735ffbd4df
+IPv4
+SSH
+TCP
+22
+0.0.0.0/0
+–
+–
+sgr-0175a1122ff2377d2
+IPv4
+Custom TCP
+TCP
+30080
+0.0.0.0/0
+–
+–
+sgr-0deb0d163c96a110e
+IPv4
+Custom TCP
+TCP
+5000
+0.0.0.0/0
+–
+–
+sgr-02b041907bd2d2fa8
+IPv4
+Custom TCP
+TCP
+8080
+0.0.0.0/0
+–
+
+   SOME COMMANDS:---------------
+     
+    1  sudo apt update
+    2  sudo apt install -y docker.io
+    3  sudo usermod -aG docker $USER && newgrp docker
+    4  sudo systemctl enable docker
+    5  sudo systemctl start docker
+    6  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    7  chmod +x kubectl
+    8  sudo mv kubectl /usr/local/bin/
+    9  kubectl version --client
+   10  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   11  chmod +x minikube-linux-amd64
+   12  sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+   13  minikube version
+   14  minikube start --driver=docker
+   15  kubectl get nodes
+   16  vi multi-tier-lab.yml
+   17  kubectl apply -f multi-tier-lab.yaml
+   18  ls
+   19  kubectl apply -f multi-tier-lab.yml
+   20  kubectl get all -n multitier-lab
+   21  kubectl get pods -n multitier-lab -w
+   22  kubectl logs -n multitier-lab deployment/backend
+   23  kubectl edit deployment backend -n multitier-lab
+   24  kubectl rollout status deployment/backend -n multitier-lab
+   25  kubectl get pods -n multitier-lab
+   26  kubectl logs -n multitier-lab backend-6d754d48fb-5mkxm --tail=100
+   27  cat multi-tier-lab.yml
+   28  kubectl get deployment backend -n multitier-lab -o yml
+   29  kubectl get deployment backend -n multi-tier-lab -o yml
+   30  kubectl get deployment backend -n multitier-lab -o yml
+   31  kubectl get deployment backend -n multitier-lab -o yaml
+   32  kubectl edit deployment backend -n multitier-lab
+   33  kubectl delete ns multitier-lab
+   34  kubectl get ns
+   35  kubectl apply -f multi-tier-lab.yml
+   36  kubectl get pods -n multitier-lab -w
+   37  kubectl get ns
+   38  kubectl get all -n multitier-lab
+   39  kubectl logs -n multitier-lab deployment/backend
+   40  kubectl get deployment backend -n multitier-lab -o yaml | grep -A30 "args:"
+   41  kubectl delete namespace multitier-lab
+   42  kubectl get ns
+   43  cat multi-tier-lab.yml
+   44  ls
+   45  rm multi-tier-lab.yml
+   46  vim multitier-lab.yml
+   47  kubectl apply -f multitier-lab.yml
+   48  kubectl logs -n multitier-lab deployment/backend --tail=100
+   49  kubectl get pods -n multitier-lab
+   50  kubectl port-forward -n multitier-lab svc/backend-service 5000:5000 --address 0.0.0.0
+   51  ls
+   52  curl http://localhost:5000/api/health
+   53  curl http://52.66.157.176:5000/api/health
+   54  kubectl get svc -n multitier-lab
+   55  kubectl get all -n multitier-lab
+   56  kubectl get pvc -n multitier-lab
+   57  minikube ip
+   58  kubectl get  odes
+   59  minikube ip
+   60  kubectl get nodes
+   61  kubemini ip
+   62  minikube ip
+   63  kubectl port-forward -n multitier-lab svc/backend-service 5000:5000 --address 0.0.0.0
+   64  kubectl port-forward -n multitier-lab svc/frontend-service 8080:80 --address 0.0.0.0
