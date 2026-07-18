@@ -1,0 +1,945 @@
+AWS & DevOps Interview Questions
+Part A: AWS Interview Questions
+1/ AWS Fundamentals
+What is cloud computing, and how is AWS used?
+What are the main service models: IaaS, PaaS and SaaS?
+What is the difference between public, private and hybrid cloud?
+What is an AWS Region?
+What is an Availability Zone?
+What is an AWS Edge Location?
+What is the AWS Shared Responsibility Model?
+What is the difference between scalability and elasticity?
+What is high availability in AWS?
+What is fault tolerance in AWS?
+What is the difference between vertical and horizontal scaling?
+What is the AWS Free Tier?
+What is an Amazon Resource Name, or ARN?
+What are AWS service quotas?
+How do you choose the correct AWS Region for an application?
+
+2/ Amazon EC2
+What is Amazon EC2?
+What are the different EC2 instance families?
+How do you select the correct EC2 instance type?
+What is an Amazon Machine Image, or AMI?
+What is the difference between public, private and custom AMIs?
+What is EC2 user data?
+What is EC2 instance metadata?
+What is the difference between stopping, rebooting and terminating an EC2 instance?
+What is the difference between On-Demand, Reserved, Spot and Dedicated Instances?
+What happens to data stored on an instance store volume when an instance stops?
+What is a security group?
+How is a security group different from a firewall?
+Can multiple security groups be attached to one EC2 instance?
+What is a key pair in EC2?
+How do you connect to an EC2 instance using SSH?
+How do you connect to a private EC2 instance?
+What is EC2 Instance Connect?
+What is AWS Systems Manager Session Manager?
+How do you troubleshoot an EC2 instance that is not reachable?
+What is EC2 termination protection?
+What are EC2 placement groups?
+What is the difference between cluster, spread and partition placement groups?
+What is an Elastic IP address?
+Why should Elastic IP addresses be used carefully?
+How can you automate software installation during EC2 launch?
+
+3/ EBS and Storage
+What is Amazon EBS?
+What is the difference between EBS and instance store?
+What are the different EBS volume types?
+What is the difference between gp2 and gp3 volumes?
+What is an EBS snapshot?
+Are EBS snapshots full or incremental?
+Can an EBS volume be attached to multiple instances?
+What is EBS Multi-Attach?
+Can an EBS volume be attached to an instance in another Availability Zone?
+How do you increase the size of an EBS volume?
+How do you encrypt an existing unencrypted EBS volume?
+What happens to the root EBS volume when an EC2 instance is terminated?
+How do you back up EBS volumes automatically?
+What is Amazon Data Lifecycle Manager?
+How do you restore an EBS volume from a snapshot?
+What is the difference between IOPS and throughput?
+How do you troubleshoot a full EBS volume?
+How do you troubleshoot high EBS latency?
+
+4/ Amazon S3
+What is Amazon S3?
+What is an S3 bucket?
+What is an S3 object?
+What is the maximum size of an S3 object?
+What are the different S3 storage classes?
+What is the difference between S3 Standard and S3 Intelligent-Tiering?
+What is S3 Standard-IA?
+What is S3 One Zone-IA?
+What are S3 Glacier storage classes?
+What is S3 versioning?
+What is an S3 lifecycle policy?
+What is S3 object locking?
+What is the difference between governance mode and compliance mode?
+What is an S3 bucket policy?
+What is the difference between an S3 bucket policy and an IAM policy?
+What is an S3 Access Control List?
+How do you prevent public access to an S3 bucket?
+What is S3 Block Public Access?
+What is a pre-signed URL?
+What is multipart upload?
+When should multipart upload be used?
+What is S3 Transfer Acceleration?
+What is S3 Cross-Region Replication?
+What is S3 Same-Region Replication?
+What is static website hosting in S3?
+How can CloudFront be used with a private S3 bucket?
+What is an Origin Access Control?
+How do you encrypt data stored in S3?
+What is the difference between SSE-S3, SSE-KMS and client-side encryption?
+How do you troubleshoot an S3 Access Denied error?
+
+5/ IAM and AWS Security
+What is AWS Identity and Access Management?
+What is the difference between an IAM user, group and role?
+What is an IAM policy?
+What is the difference between identity-based and resource-based policies?
+What is the principle of least privilege?
+What is an explicit deny in IAM?
+What happens when an IAM policy contains both allow and deny?
+What is an IAM role?
+How does an EC2 instance access AWS services securely?
+Why should access keys not be stored inside application code?
+What are temporary security credentials?
+What is AWS Security Token Service?
+What is multi-factor authentication?
+What is IAM policy evaluation logic?
+What is a permissions boundary?
+What is an AWS Organizations Service Control Policy?
+What is the difference between an SCP and an IAM policy?
+What is role assumption?
+What is cross-account access in AWS?
+What is identity federation?
+What is AWS IAM Identity Center?
+How do you rotate AWS access keys?
+What is AWS Secrets Manager?
+What is the difference between Secrets Manager and Parameter Store?
+What is AWS Key Management Service?
+What is a customer-managed KMS key?
+What is AWS CloudHSM?
+How do you secure the AWS root account?
+How do you investigate unauthorized AWS activity?
+What is AWS GuardDuty?
+What is AWS Security Hub?
+What is Amazon Inspector?
+What is AWS WAF?
+What is AWS Shield?
+
+6/ VPC and Networking
+What is an Amazon VPC?
+What is a CIDR block?
+What is a subnet?
+What is the difference between a public and private subnet?
+What makes a subnet public?
+What is a route table?
+What is an Internet Gateway?
+What is a NAT Gateway?
+What is the difference between a NAT Gateway and an Internet Gateway?
+Can a private subnet access the internet?
+What is a Network Access Control List?
+What is the difference between a security group and a NACL?
+Are security groups stateful or stateless?
+Are NACLs stateful or stateless?
+What is a VPC endpoint?
+What is the difference between gateway and interface endpoints?
+What is AWS PrivateLink?
+What is VPC peering?
+What are the limitations of VPC peering?
+What is AWS Transit Gateway?
+When would you use Transit Gateway instead of VPC peering?
+What is a bastion host?
+What is a jump server?
+What is a VPC Flow Log?
+What is an Elastic Network Interface?
+What is a private IP address?
+What is a public IP address?
+What is an Elastic IP address?
+What is DNS resolution inside a VPC?
+What is DHCP option set?
+How do you connect an on-premises network to AWS?
+What is AWS Site-to-Site VPN?
+What is AWS Direct Connect?
+What is the difference between VPN and Direct Connect?
+What is AWS Client VPN?
+How do you troubleshoot communication between two EC2 instances?
+How do you troubleshoot an instance that has internet access issues?
+
+7/ Load Balancing and Auto Scaling
+What is Elastic Load Balancing?
+What is the difference between ALB, NLB and Gateway Load Balancer?
+When should an Application Load Balancer be used?
+When should a Network Load Balancer be used?
+What is a target group?
+What is a load balancer listener?
+What are listener rules?
+What is host-based routing?
+What is path-based routing?
+What is a health check?
+What happens when a target fails a health check?
+What is cross-zone load balancing?
+What is session stickiness?
+What is SSL termination?
+How do you configure HTTPS on a load balancer?
+What is AWS Certificate Manager?
+What is connection draining or deregistration delay?
+What is an Auto Scaling Group?
+What is a launch template?
+What is the difference between desired, minimum and maximum capacity?
+What is a target tracking scaling policy?
+What is step scaling?
+What is scheduled scaling?
+What is predictive scaling?
+What is a cooldown period?
+How does Auto Scaling replace an unhealthy instance?
+Can one Auto Scaling Group span multiple Availability Zones?
+How do you handle sudden traffic spikes?
+How do you perform a zero-downtime instance replacement?
+
+8/ Route 53 and CloudFront
+What is Amazon Route 53?
+What is DNS?
+What is a hosted zone?
+What is the difference between a public and private hosted zone?
+What is an A record?
+What is an AAAA record?
+What is a CNAME record?
+What is an alias record?
+What is the difference between CNAME and alias records?
+What is DNS TTL?
+What are the Route 53 routing policies?
+What is simple routing?
+What is weighted routing?
+What is latency-based routing?
+What is failover routing?
+What is geolocation routing?
+What is geoproximity routing?
+What is multivalue answer routing?
+What are Route 53 health checks?
+How do you implement DNS failover?
+What is Amazon CloudFront?
+What is a CloudFront distribution?
+What is an origin in CloudFront?
+What is an edge location?
+What is caching?
+What is a cache hit and cache miss?
+What is cache invalidation?
+How do signed URLs and signed cookies work?
+How does CloudFront improve application performance?
+How can CloudFront protect an application?
+What is the difference between CloudFront and Global Accelerator?
+How do you troubleshoot outdated content in CloudFront?
+
+9/ RDS and Databases
+What is Amazon RDS?
+Which database engines are supported by RDS?
+What is the difference between RDS and a database installed on EC2?
+What is Amazon Aurora?
+What is the difference between Aurora and standard RDS engines?
+What is Multi-AZ deployment?
+What is an RDS read replica?
+What is the difference between Multi-AZ and read replicas?
+Can a read replica be promoted to a standalone database?
+What is an RDS automated backup?
+What is a manual database snapshot?
+What is the difference between automated backups and snapshots?
+What is the RDS backup retention period?
+How do you encrypt an RDS database?
+How do you connect an application to a private RDS database?
+What is an RDS parameter group?
+What is an RDS option group?
+What is RDS Proxy?
+How does RDS failover work?
+What is a database subnet group?
+How do you troubleshoot an application that cannot connect to RDS?
+How do you handle high CPU usage on RDS?
+How do you handle too many database connections?
+How do you perform an RDS engine upgrade?
+How do you migrate an on-premises database to AWS?
+What is AWS Database Migration Service?
+
+10/ DynamoDB
+What is Amazon DynamoDB?
+Is DynamoDB a relational or NoSQL database?
+What is a DynamoDB table?
+What is a partition key?
+What is a sort key?
+What is a composite primary key?
+What is a DynamoDB item?
+What is an attribute?
+What is the difference between Query and Scan?
+Why should Scan operations be avoided on large tables?
+What is a Global Secondary Index?
+What is a Local Secondary Index?
+What is the difference between GSI and LSI?
+What is DynamoDB on-demand capacity?
+What is provisioned capacity?
+What are read and write capacity units?
+What is eventual consistency?
+What is strongly consistent reading?
+What is DynamoDB Streams?
+What is DynamoDB Accelerator?
+What is DynamoDB TTL?
+What is a hot partition?
+How do you avoid hot partitions?
+What is DynamoDB global table?
+How do you back up a DynamoDB table?
+When would you choose DynamoDB instead of RDS?
+
+11/ Serverless and AWS Lambda
+What is serverless computing?
+What is AWS Lambda?
+What events can trigger a Lambda function?
+What is a Lambda execution role?
+What is the maximum execution duration of a Lambda function?
+What is a cold start?
+How can Lambda cold starts be reduced?
+What is provisioned concurrency?
+What is reserved concurrency?
+What is the difference between synchronous and asynchronous Lambda invocation?
+What happens when an asynchronous Lambda invocation fails?
+What is a dead-letter queue?
+What is a Lambda layer?
+What are Lambda environment variables?
+How do you securely store secrets used by Lambda?
+Can Lambda access resources inside a VPC?
+What are the networking effects of placing Lambda inside a VPC?
+What is AWS API Gateway?
+What is the difference between REST API and HTTP API?
+What is API Gateway throttling?
+What is API Gateway authorization?
+What is AWS Step Functions?
+When should Step Functions be used instead of one large Lambda function?
+How do you monitor and troubleshoot a Lambda function?
+How do you deploy multiple versions of a Lambda function?
+What are Lambda aliases?
+How do you perform a canary deployment for Lambda?
+
+12/ Messaging and Integration Services
+What is Amazon SQS?
+What is the difference between Standard and FIFO queues?
+What is a visibility timeout?
+What is a dead-letter queue?
+What is long polling?
+What is message retention?
+How does SQS handle duplicate messages?
+What is Amazon SNS?
+What is the publish-subscribe model?
+What is the difference between SNS and SQS?
+How can SNS and SQS be used together?
+What is fan-out architecture?
+What is Amazon EventBridge?
+What is the difference between EventBridge and SNS?
+What is an EventBridge rule?
+What is an event bus?
+What is Amazon MQ?
+When should Amazon MQ be used?
+How do you design a decoupled application in AWS?
+How do you handle failed messages in an event-driven application?
+
+13/ Monitoring, Logging and Auditing
+What is Amazon CloudWatch?
+What are CloudWatch metrics?
+What are CloudWatch Logs?
+What is a CloudWatch alarm?
+What is a CloudWatch dashboard?
+What are custom metrics?
+What is a CloudWatch Logs Insights query?
+What is Amazon CloudWatch Agent?
+What is AWS CloudTrail?
+What is the difference between CloudWatch and CloudTrail?
+What are CloudTrail management events?
+What are CloudTrail data events?
+What is an AWS Config rule?
+What is the difference between AWS Config and CloudTrail?
+What is AWS X-Ray?
+How do you monitor application latency?
+How do you monitor EC2 memory and disk usage?
+Why is EC2 memory usage not available by default in CloudWatch?
+How do you configure alerts for application failures?
+How do you centralize logs from multiple AWS accounts?
+How do you investigate unexpected resource deletion?
+How do you create an audit trail for AWS API activity?
+
+14/ Infrastructure as Code in AWS
+What is Infrastructure as Code?
+What is AWS CloudFormation?
+What is a CloudFormation template?
+What are CloudFormation stacks?
+What are parameters in CloudFormation?
+What are outputs in CloudFormation?
+What are mappings and conditions?
+What is a change set?
+What is stack drift?
+What is a nested stack?
+What is a CloudFormation rollback?
+What is the AWS Cloud Development Kit?
+What is the difference between CDK and CloudFormation?
+What is Terraform?
+What is the difference between Terraform and CloudFormation?
+How do you manage infrastructure across multiple environments?
+How do you protect production resources from accidental deletion?
+How do you store and review infrastructure code?
+How do you securely manage secrets in Infrastructure as Code?
+How do you import existing AWS resources into IaC management?
+
+15/ AWS Architecture and Scenario-Based Questions
+How would you design a highly available web application in AWS?
+How would you host a static website securely in AWS?
+How would you design a three-tier architecture?
+How would you design an application that can survive an Availability Zone failure?
+How would you design an application that can survive a complete Region failure?
+How would you migrate an application from on-premises servers to AWS?
+How would you design a disaster recovery strategy?
+What is the difference between backup and restore, pilot light, warm standby and multi-site disaster recovery?
+How would you reduce the cost of an AWS application?
+How would you design a secure file-upload system?
+How would you serve one domain from multiple backend servers?
+How would you expose a private application securely to users?
+How would you connect multiple VPCs across different AWS accounts?
+How would you implement centralized logging?
+How would you secure an application against DDoS attacks?
+How would you design a scalable image-processing system?
+How would you build an event-driven order-processing system?
+How would you design an application for millions of requests?
+How would you handle sudden traffic spikes?
+How would you deploy a new application version without downtime?
+How would you roll back a failed production deployment?
+How would you store user sessions in an Auto Scaling environment?
+How would you troubleshoot intermittent application latency?
+How would you troubleshoot a website returning HTTP 502 errors?
+How would you troubleshoot a website returning HTTP 503 errors?
+How would you prevent a single AWS resource from becoming a point of failure?
+
+Part B: DevOps Interview Questions
+1/ DevOps Fundamentals
+What is DevOps?
+Why is DevOps important?
+What problems does DevOps solve?
+What is the DevOps lifecycle?
+What is the difference between Agile and DevOps?
+What is the difference between DevOps and traditional operations?
+What is continuous integration?
+What is continuous delivery?
+What is continuous deployment?
+What is the difference between continuous delivery and continuous deployment?
+What is Infrastructure as Code?
+What is configuration management?
+What is immutable infrastructure?
+What is idempotency?
+What is automation in DevOps?
+What is a feedback loop?
+What is shift-left testing?
+What is DevSecOps?
+What are the responsibilities of a DevOps engineer?
+Which metrics can be used to measure DevOps performance?
+What are deployment frequency and lead time?
+What are change failure rate and mean time to recovery?
+
+2/ Linux for DevOps
+What is the Linux kernel?
+What is the difference between Linux and Unix?
+What is a Linux process?
+What is the difference between a process and a thread?
+How do you check running processes?
+What is the difference between ps, top and htop?
+How do you terminate a process?
+What is the difference between kill and kill -9?
+What is a zombie process?
+What is an orphan process?
+What is systemd?
+How do you start, stop and restart a Linux service?
+How do you check service logs?
+What is the purpose of journalctl?
+What are Linux file permissions?
+What do read, write and execute permissions mean?
+What is the difference between chmod, chown and chgrp?
+What do permissions 755 and 644 mean?
+What is the difference between a hard link and a symbolic link?
+What is a mount point?
+How do you check disk usage?
+What is the difference between df and du?
+How do you find large files in Linux?
+How do you check memory usage?
+What is swap memory?
+How do you check open ports?
+What is the difference between netstat, ss and lsof?
+How do you search text using grep?
+How do pipes and redirection work?
+What is the difference between > and >>?
+What is a cron job?
+How do you schedule a Linux command?
+What is an environment variable?
+How do you troubleshoot a server with high CPU usage?
+How do you troubleshoot a server with high memory usage?
+How do you troubleshoot a server with no disk space?
+How do you troubleshoot a service that is not starting?
+
+3/ Shell Scripting
+What is shell scripting?
+What is a shebang line?
+What is the difference between Bash and Shell?
+How do you define a variable in Bash?
+How do you read user input in a shell script?
+How do you use command-line arguments?
+What are $0, $1, $#, $? and $$?
+How do conditional statements work in Bash?
+How do loops work in Bash?
+How do you create and call a function?
+What is command substitution?
+What is the difference between single and double quotes?
+What does set -e do?
+What does set -u do?
+What does set -o pipefail do?
+How do you debug a shell script?
+How do you check whether a file exists?
+How do you check whether a process is running?
+How do you process a text file line by line?
+How do you handle errors in a shell script?
+How would you write a script to monitor disk usage?
+How would you write a script to back up application files?
+How would you write a script to restart a failed service?
+How would you pass secrets securely to a shell script?
+
+4/ Git and Version Control
+What is version control?
+What is Git?
+What is the difference between Git and GitHub?
+What is a Git repository?
+What is the difference between a local and remote repository?
+What is a Git commit?
+What is the staging area?
+What is the difference between git add and git commit?
+What is a Git branch?
+Why are branches used?
+What is the difference between merge and rebase?
+What is a merge conflict?
+How do you resolve a merge conflict?
+What is git pull?
+What is the difference between git pull and git fetch?
+What is git clone?
+What is git push?
+What is a pull request?
+What is a detached HEAD state?
+What is git stash?
+What is git cherry-pick?
+What is the difference between git reset and git revert?
+What is the difference between soft, mixed and hard reset?
+What is .gitignore?
+What is a Git tag?
+What is a protected branch?
+What is a branching strategy?
+What is GitFlow?
+What is trunk-based development?
+How do you remove a secret accidentally committed to Git?
+How do you roll back a bad commit?
+How do you squash multiple commits?
+How do you recover a deleted branch?
+How do you handle multiple developers working on the same repository?
+
+5/ CI/CD Pipelines
+What is a CI/CD pipeline?
+What are the main stages of a CI/CD pipeline?
+What happens during the build stage?
+What happens during the testing stage?
+What happens during the deployment stage?
+What is a pipeline trigger?
+What is a webhook?
+What is an artifact?
+What is an artifact repository?
+What is pipeline as code?
+What is a build agent?
+What is the difference between an agent and a controller?
+What is a self-hosted runner?
+What is a pipeline environment variable?
+How do you manage secrets in a pipeline?
+What is a manual approval gate?
+What is a quality gate?
+What is a rollback strategy?
+What is a deployment pipeline?
+What is a release pipeline?
+How do you prevent broken code from reaching production?
+How do you run jobs in parallel?
+How do you trigger one pipeline after multiple pipelines complete successfully?
+How do you reuse pipeline code?
+How do you handle a failed pipeline?
+How do you reduce pipeline execution time?
+How do you separate development, staging and production pipelines?
+How do you secure a CI/CD pipeline?
+How do you manage deployment credentials?
+How do you implement zero-downtime deployment?
+
+6/ Jenkins
+What is Jenkins?
+What is the Jenkins controller?
+What is a Jenkins agent?
+What is a Jenkins job?
+What is the difference between a freestyle job and a pipeline job?
+What is a Jenkinsfile?
+What is a declarative pipeline?
+What is a scripted pipeline?
+What are stages and steps in Jenkins?
+What is a Jenkins workspace?
+What are Jenkins plugins?
+How do you connect Jenkins with GitHub?
+What is a GitHub webhook?
+How do you trigger Jenkins automatically after a Git push?
+What is parameterized build?
+What is a Jenkins environment variable?
+What is the Jenkins credentials store?
+How do you use credentials securely inside a Jenkins pipeline?
+What is the difference between post, success, failure and always blocks?
+How do you archive build artifacts?
+How do you publish test reports?
+How do you run Jenkins jobs in parallel?
+How do you trigger a downstream job?
+How do you trigger a third job after two independent jobs succeed?
+What is the build step in Jenkins Pipeline?
+How do you configure scheduled builds?
+What is a Jenkins shared library?
+Why are shared libraries used?
+How do you restrict Jenkins jobs based on user roles?
+How do you back up Jenkins?
+How do you restore Jenkins?
+How do you scale Jenkins agents?
+How do you run Jenkins agents using Docker?
+How do you run Jenkins agents in Kubernetes?
+How do you troubleshoot a Jenkins build stuck in the queue?
+How do you troubleshoot an offline Jenkins agent?
+How do you handle a failed deployment from Jenkins?
+How do you secure the Jenkins server?
+
+7/ Docker
+What is Docker?
+What problem does Docker solve?
+What is a container?
+What is the difference between a container and a virtual machine?
+What is a Docker image?
+What is a Docker container?
+What is a Dockerfile?
+What is the difference between RUN, CMD and ENTRYPOINT?
+What is the difference between COPY and ADD?
+What is a Docker image layer?
+How does Docker image caching work?
+What is a multi-stage build?
+Why are multi-stage builds used?
+What is Docker Hub?
+What is a private Docker registry?
+What is a Docker volume?
+What is a bind mount?
+What is the difference between a volume and a bind mount?
+What are Docker networks?
+What is the difference between bridge, host and none networks?
+How do containers communicate with each other?
+How do you expose a container port?
+What is the difference between EXPOSE and port publishing?
+What is Docker Compose?
+What is the difference between Docker Compose and Kubernetes?
+What is a container health check?
+What happens when the main container process stops?
+How do you inspect container logs?
+How do you enter a running container?
+How do you reduce Docker image size?
+How do you scan a Docker image for vulnerabilities?
+Why should containers not run as root?
+How do you pass environment variables to a container?
+How do you manage secrets in containers?
+What is the difference between docker stop and docker kill?
+What is the difference between docker exec and docker attach?
+How do you troubleshoot a container that exits immediately?
+How do you troubleshoot a container that cannot access the internet?
+How do you troubleshoot communication between two containers?
+How do you persist database data running inside a container?
+
+8/ Kubernetes Fundamentals
+What is Kubernetes?
+Why is Kubernetes used?
+What is a Kubernetes cluster?
+What is a control plane?
+What is a worker node?
+What is the role of the API server?
+What is etcd?
+What is the scheduler?
+What is the controller manager?
+What is kubelet?
+What is kube-proxy?
+What is a Pod?
+Can a Pod contain multiple containers?
+What is a Deployment?
+What is a ReplicaSet?
+What is the difference between a Pod, ReplicaSet and Deployment?
+What is a Kubernetes Service?
+What is the difference between ClusterIP, NodePort and LoadBalancer?
+What is a headless Service?
+What is a Namespace?
+Why are namespaces used?
+What are labels and selectors?
+What are annotations?
+What is a ConfigMap?
+What is a Secret?
+What is the difference between ConfigMap and Secret?
+What is a rolling update?
+What is a rollback in Kubernetes?
+What is the desired state?
+What is a declarative configuration?
+What is the difference between imperative and declarative commands?
+What is a Kubernetes manifest?
+What is the purpose of kubectl apply?
+What is the difference between kubectl create and kubectl apply?
+What are liveness, readiness and startup probes?
+What happens when a liveness probe fails?
+What happens when a readiness probe fails?
+What are resource requests and limits?
+What happens when a container exceeds its memory limit?
+What is CPU throttling?
+What is a PersistentVolume?
+What is a PersistentVolumeClaim?
+What is a StorageClass?
+What is an Ingress?
+What is an Ingress Controller?
+What is a Kubernetes Job?
+What is a CronJob?
+What is a DaemonSet?
+What is a StatefulSet?
+What is the difference between Deployment and StatefulSet?
+
+9/ Kubernetes Advanced and Troubleshooting
+How does Kubernetes schedule a Pod?
+What is a node selector?
+What is node affinity?
+What is Pod affinity?
+What is Pod anti-affinity?
+What are taints and tolerations?
+What is a Pod disruption budget?
+What is Horizontal Pod Autoscaler?
+What is Vertical Pod Autoscaler?
+What is Cluster Autoscaler?
+How does HPA calculate the required number of replicas?
+What is the Metrics Server?
+What is a rolling deployment strategy?
+What is a recreate deployment strategy?
+What is a blue-green deployment in Kubernetes?
+What is a canary deployment in Kubernetes?
+What is RBAC in Kubernetes?
+What is the difference between Role and ClusterRole?
+What is the difference between RoleBinding and ClusterRoleBinding?
+What is a ServiceAccount?
+How does Kubernetes DNS work?
+What is a NetworkPolicy?
+What is a Kubernetes operator?
+What is a Custom Resource Definition?
+What is Helm?
+What is a Helm chart?
+What is the difference between values files and templates?
+What is a Helm release?
+How do you roll back a Helm release?
+Why would a Pod remain in Pending state?
+Why would a Pod enter CrashLoopBackOff?
+What causes ImagePullBackOff?
+What causes OOMKilled?
+How do you troubleshoot a Service that cannot reach its Pods?
+How do you troubleshoot an Ingress returning 404?
+How do you troubleshoot a Pod that cannot resolve DNS?
+How do you troubleshoot a container that cannot access a ConfigMap?
+How do you troubleshoot a PVC stuck in Pending state?
+How do you inspect logs from a previously crashed container?
+How do you debug a Pod without modifying its original container image?
+How do you safely drain a Kubernetes node?
+What happens when a worker node becomes unavailable?
+How do you upgrade a Kubernetes cluster with minimum downtime?
+
+10/ Terraform
+What is Terraform?
+What is Infrastructure as Code?
+What is a Terraform provider?
+What is a Terraform resource?
+What is a data source?
+What is a Terraform variable?
+What is a local value?
+What is a Terraform output?
+What is a Terraform state file?
+Why is the state file important?
+What is a remote backend?
+Why should Terraform state not normally be stored only on a developer’s laptop?
+How do you secure a Terraform state file?
+What is state locking?
+What is terraform init?
+What is terraform validate?
+What is terraform plan?
+What is terraform apply?
+What is terraform destroy?
+What is the difference between count and for_each?
+What is a Terraform module?
+Why are Terraform modules used?
+What are Terraform workspaces?
+How do you manage multiple environments in Terraform?
+What is Terraform drift?
+How do you detect infrastructure drift?
+What is terraform import?
+What is terraform taint?
+What is the lifecycle block?
+What does prevent_destroy do?
+What does create_before_destroy do?
+How do dependencies work in Terraform?
+What is the difference between implicit and explicit dependencies?
+How do you pass secrets to Terraform securely?
+How do you use Terraform in a CI/CD pipeline?
+How do you handle a failed Terraform apply?
+How do you recover a corrupted or lost state file?
+How do you upgrade Terraform providers safely?
+How do you prevent accidental production infrastructure deletion?
+
+11/ Ansible and Configuration Management
+What is configuration management?
+What is Ansible?
+How is Ansible different from Terraform?
+What is an Ansible inventory?
+What is an Ansible playbook?
+What is an Ansible task?
+What is an Ansible module?
+What is an Ansible role?
+What is a handler?
+What is an Ansible variable?
+What are facts in Ansible?
+What is the difference between static and dynamic inventory?
+What is idempotency in Ansible?
+Does Ansible require an agent?
+How does Ansible connect to managed servers?
+What is privilege escalation?
+What is Ansible Vault?
+How do you protect sensitive variables?
+What are templates in Ansible?
+What is a Jinja2 template?
+What are tags in Ansible?
+What is the difference between command and shell modules?
+How do you execute a playbook only on selected hosts?
+How do you reuse Ansible code?
+How do you handle different variables for development and production?
+How do you troubleshoot an unreachable Ansible host?
+How do you perform rolling updates using Ansible?
+
+12/ Monitoring and Observability
+What is monitoring?
+What is observability?
+What is the difference between monitoring and observability?
+What are metrics, logs and traces?
+What is Prometheus?
+How does Prometheus collect metrics?
+What is an exporter in Prometheus?
+What is PromQL?
+What is Grafana?
+How is Grafana used with Prometheus?
+What is Alertmanager?
+What is a time-series database?
+What is application performance monitoring?
+What is distributed tracing?
+What is OpenTelemetry?
+What is the ELK stack?
+What are Elasticsearch, Logstash and Kibana?
+What is the difference between Logstash and Fluent Bit?
+What is centralized logging?
+What is log rotation?
+What is an SLI?
+What is an SLO?
+What is an SLA?
+What is an error budget?
+What is mean time to detect?
+What is mean time to recovery?
+How do you monitor CPU, memory, disk and network usage?
+How do you monitor containers?
+How do you monitor a Kubernetes cluster?
+How do you avoid alert fatigue?
+What information should a useful alert contain?
+How do you investigate increased application latency?
+How do you investigate a sudden increase in HTTP 5xx errors?
+
+13/ DevSecOps
+What is DevSecOps?
+How is security integrated into a CI/CD pipeline?
+What is static application security testing?
+What is dynamic application security testing?
+What is software composition analysis?
+What is dependency scanning?
+What is container image scanning?
+What is Infrastructure as Code scanning?
+What is secret scanning?
+What is the principle of least privilege?
+What is role-based access control?
+What is vulnerability management?
+What is the difference between a vulnerability and an exploit?
+What is a software bill of materials?
+How do you prevent secrets from being committed to Git?
+How do you securely pass credentials to pipelines?
+How do you rotate leaked credentials?
+How do you secure a Docker container?
+How do you secure a Kubernetes cluster?
+What are signed container images?
+What is admission control in Kubernetes?
+What is policy as code?
+What are tools such as Trivy, SonarQube and OWASP Dependency-Check used for?
+How do you handle a critical vulnerability found in production?
+How do you ensure only approved artifacts are deployed?
+
+14/ Deployment Strategies
+What is a rolling deployment?
+What is a recreate deployment?
+What is blue-green deployment?
+What is canary deployment?
+What is shadow deployment?
+What is A/B testing?
+What is feature flagging?
+What is zero-downtime deployment?
+What is rollback?
+What is roll-forward recovery?
+How do you choose the correct deployment strategy?
+How do you validate a deployment before sending all traffic to it?
+How do you perform database changes without application downtime?
+How do you maintain backward compatibility during deployment?
+How do you handle a failed canary release?
+How do you automate rollback based on monitoring metrics?
+How do you deploy a stateful application safely?
+How do you prevent two pipeline executions from deploying simultaneously?
+
+15/ DevOps System Design and Production Scenarios
+How would you design a complete CI/CD pipeline for a web application?
+How would you design a pipeline for a microservices application?
+How would you deploy an application to multiple environments?
+How would you deploy Docker containers to Kubernetes?
+How would you manage configuration across development, testing and production?
+How would you manage secrets across multiple environments?
+How would you implement automated rollback?
+How would you design a highly available Jenkins setup?
+How would you scale Jenkins build agents?
+How would you reduce a pipeline that takes 40 minutes to complete?
+How would you handle two builds running at the same time?
+How would you trigger deployment only after multiple builds succeed?
+How would you prevent an old pipeline execution from overwriting a newer deployment?
+How would you build an artifact once and promote it across environments?
+How would you ensure that the same artifact reaches production?
+How would you design centralized monitoring and logging?
+How would you troubleshoot a production application that suddenly became slow?
+How would you troubleshoot an application returning HTTP 502 errors?
+How would you troubleshoot an application returning HTTP 503 errors?
+How would you troubleshoot a deployment that works locally but fails in CI/CD?
+How would you troubleshoot a Docker container that works locally but fails in Kubernetes?
+How would you troubleshoot a Kubernetes Pod stuck in Pending state?
+How would you recover from an accidental infrastructure deletion?
+How would you handle a leaked production credential?
+How would you handle a failed database migration?
+How would you design disaster recovery for a production application?
+How would you achieve zero downtime during application deployment?
+How would you handle sudden traffic growth?
+How would you make the deployment process auditable?
+How would you ensure that only authorized users can deploy to production?
+How would you reduce cloud infrastructure costs without affecting reliability?
+How would you investigate an issue affecting only one user or browser?
+How would you respond to a production incident?
+What information should be included in an incident postmortem?
+How do you prevent the same production incident from happening again?
+
